@@ -8,7 +8,7 @@ You can host your own terminology database using your own backend, or use a simp
 
 ---
 
-# Features
+## Features
 
 - Browser extension built with Vite
 - Supports English and Spanish terminology
@@ -20,7 +20,7 @@ You can host your own terminology database using your own backend, or use a simp
 
 ---
 
-# Requirements
+## Requirements
 
 Before running or building the project, make sure you have:
 
@@ -29,7 +29,7 @@ Before running or building the project, make sure you have:
 - A public API endpoint returning the expected structure
 - A Google account _(optional, only if using Google Sheets + Apps Script)_
 
-Verify your installation:
+### Verify Your Installation
 
 ```bash
 node -v
@@ -38,15 +38,15 @@ npm -v
 
 ---
 
-# Installation
+## Installation
 
-Clone the repository:
+### Clone the Repository
 
 ```bash
 git clone https://github.com/Skitterjubs/NOIRLab-Terminology-Extension.git
 ```
 
-Install dependencies:
+### Install Dependencies
 
 ```bash
 npm install
@@ -54,17 +54,17 @@ npm install
 
 ---
 
-# Environment Variables
+## Environment Variables
 
 This repository includes a `.env.example` file with placeholder values.
 
-Example:
+### Example
 
 ```env
 VITE_API_URL=My API URL
 ```
 
-Create your own `.env` file:
+### Create Your Own `.env` File
 
 ```bash
 cp .env.example .env
@@ -78,17 +78,19 @@ VITE_API_URL=https://your-api-url.com
 
 ---
 
-# Important Security Note
+## Important Security Note
 
 Even though `.env` variables are injected during build time, frontend environment variables are still visible in the final browser bundle.
 
 Users can inspect them through browser developer tools.
 
-Because of this:
+### Because of This
 
 - Your API endpoint should be considered public
 - Do not expose private credentials
 - Do not store secrets in frontend environment variables
+
+### Recommended API Protection
 
 If needed, secure your API using:
 
@@ -100,7 +102,7 @@ If needed, secure your API using:
 
 ---
 
-# Expected API Response Format
+## Expected API Response Format
 
 The extension expects the API to return an array of `Terminology` objects with the following structure:
 
@@ -121,7 +123,7 @@ export type Terminology = {
 };
 ```
 
-Example response:
+### Example Response
 
 ```json
 [
@@ -275,7 +277,7 @@ Replace the URL with your deployed Apps Script Web App URL.
 
 ---
 
-# Development Mode
+## Development Mode
 
 Run the development server:
 
@@ -287,7 +289,7 @@ Depending on your extension tooling setup, you may still need to manually reload
 
 ---
 
-# Production Build
+## Production Build
 
 Build the extension:
 
@@ -361,7 +363,7 @@ Most browser stores require a ZIP archive of the extension files.
 
 Compress the contents of the `dist/` folder.
 
-Example structure:
+### Example Structure
 
 ```text
 dist/
